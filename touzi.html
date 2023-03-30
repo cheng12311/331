@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .face{position: absolute;width: 200px;height: 200px;border:2px solid black;
+    text-align: center;}
+    .container{width: 200px;height: 200px;perspective: 600px; margin:100px auto 0;}
+    .cube {
+      transform-style: preserve-3d;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    animation:rotate 10s infinite linear;}
+    .font{transform:translateZ(100px);}
+    .back{transform:rotateY(180deg) translateZ(100px);}
+    .left{transform:rotateY(-90deg) translateZ(100px);}
+    .right{transform:rotateY(90deg) translateZ(100px);}
+    .top{transform:rotateX(90deg) translateZ(100px);}
+    .bottom{transform:rotateX(-90deg) translateZ(100px);}
+    @keyframes rotate {
+        from {
+            transform: rotate3d(0, 0, 0, 0deg);
+        }
+        to {
+            transform: rotate3d(0, 1, 0, 360deg);
+        }
+    }
+  </style>
+
+</head>
+<body>
+<div class="container">
+<div class="cube">
+<div class="face font">1</div>
+<div class="face back">2</div>
+<div class="face left">3</div>
+<div class="face right">4</div>
+<div class="face top">5</div>
+<div class="face bottom">6</div>
+</div>
+</div>
+</body>
+</html>
